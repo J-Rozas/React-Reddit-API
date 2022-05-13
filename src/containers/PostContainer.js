@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PostList from "../components/PostList";
 
 const PostContainer = () => {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,7 @@ const PostContainer = () => {
 
   return (
     <ul>
-      <li>Test</li>
+      <PostList posts={posts}></PostList>
     </ul>
   )
 }
