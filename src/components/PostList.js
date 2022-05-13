@@ -1,17 +1,12 @@
 import React from "react";
+import PostDetails from "./PostDetails";
 
-const PostList = ({posts, onPostClick}) => {
+const PostList = ({posts, onPostClick, currentPost}) => {
 
   const listOfPosts = posts.map(post => {
-    
-    const handleClick = function() {
-      onPostClick(post.data);
-    }
-    
+
     return (
-      <li key={post.data.id} onClick={handleClick}>
-        {post.data.title}
-      </li>
+      <PostDetails key={post.data.id} post={post} onPostClick={onPostClick}></PostDetails>
     )
   })
 

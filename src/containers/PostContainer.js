@@ -21,7 +21,7 @@ const PostContainer = () => {
   return (
     <>
       <ul>
-        <PostList posts={posts} onPostClick={onPostClick}></PostList>
+        <PostList posts={posts} onPostClick={onPostClick} currentPost={currentPost}></PostList>
       </ul>
       <p>
         {currentPost}
