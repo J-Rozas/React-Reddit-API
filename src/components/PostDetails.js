@@ -8,7 +8,10 @@ const PostDetails = ({post, onPostClick, currentPost}) => {
 
   return (
     <li onClick={handleClick}>
-      {post.data.title}
+      <p>
+        {post.data.title}
+      </p>
+      {currentPost === post.data.title ? <a href={`https://reddit.com${post.data.permalink}`} target='_blank'>Link</a> : null}
     </li>
   )
 }

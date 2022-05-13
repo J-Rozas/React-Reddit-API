@@ -6,7 +6,7 @@ const PostList = ({posts, onPostClick, currentPost}) => {
   const listOfPosts = posts.map(post => {
 
     return (
-      <PostDetails key={post.data.id} post={post} onPostClick={onPostClick}></PostDetails>
+      <PostDetails key={post.data.id} post={post} onPostClick={onPostClick} currentPost={currentPost}></PostDetails>
     )
   })
 

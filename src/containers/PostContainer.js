@@ -15,7 +15,7 @@ const PostContainer = () => {
 
 
   const onPostClick = (chosenPost) => {
-    setCurrentPost(chosenPost.permalink);
+    setCurrentPost(chosenPost.title);
   }
 
   return (
@@ -23,9 +23,6 @@ const PostContainer = () => {
       <ul>
         <PostList posts={posts} onPostClick={onPostClick} currentPost={currentPost}></PostList>
       </ul>
-      <p>
-        {currentPost}
-      </p>
     </>
   )
 }
